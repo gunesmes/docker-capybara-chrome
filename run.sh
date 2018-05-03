@@ -6,7 +6,7 @@ declare -a tags=("search" "navigate-video")
 for tag in "${tags[@]}"
 do
 	echo " - Running tests with tagged: $tag"
-	$HOME/Library/Group\ Containers/group.com.docker/bin/docker run -v $HOME/docker/simple_capybara/:/usr/src/app gunesmes/docker-capybara-chrome bash -c "cucumber features --tags @'$tag' --format json --out=report/'$tag'_report.json" &
+	$HOME/Library/Group\ Containers/group.com.docker/bin/docker run -v $PWD:/usr/src/app gunesmes/docker-capybara-chrome bash -c "cucumber features --tags @'$tag' --format json --out=report/'$tag'_report.json" &
 done
 
 wait
