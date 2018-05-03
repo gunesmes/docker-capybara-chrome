@@ -35,5 +35,3 @@ RUN apt-get update -y && \
 RUN wget https://chromedriver.storage.googleapis.com/2.36/chromedriver_linux64.zip && \
   unzip chromedriver_linux64.zip && \
   mv chromedriver /usr/local/bundle/bin/
-
-shm_size: 512M
