@@ -1,0 +1,184 @@
+[
+  {
+    "uri": "features/A001_search_product.feature",
+    "id": "a001---search-video",
+    "keyword": "Feature",
+    "name": "A001 - Search Video",
+    "description": "   As An anonymous user\n   I Want to search video\n   So That I can find my needs",
+    "line": 1,
+    "elements": [
+      {
+        "keyword": "Background",
+        "name": "User goes to home page",
+        "description": "",
+        "line": 6,
+        "type": "background",
+        "before": [
+          {
+            "match": {
+              "location": "capybara-2.16.0/lib/capybara/cucumber.rb:13"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 35800
+            }
+          },
+          {
+            "match": {
+              "location": "capybara-2.16.0/lib/capybara/cucumber.rb:17"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 16600
+            }
+          },
+          {
+            "match": {
+              "location": "capybara-2.16.0/lib/capybara/cucumber.rb:21"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 31700
+            }
+          }
+        ],
+        "steps": [
+          {
+            "keyword": "Given ",
+            "name": "user goes to homepage",
+            "line": 7,
+            "match": {
+              "location": "features/step_definitions/search.rb:1"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 8794373600
+            }
+          }
+        ]
+      },
+      {
+        "id": "a001---search-video;member-should-see-links-in-the-top-menu",
+        "keyword": "Scenario",
+        "name": "Member should see links in the top menu",
+        "description": "",
+        "line": 17,
+        "type": "scenario",
+        "tags": [
+          {
+            "name": "@javascript",
+            "line": 16
+          },
+          {
+            "name": "@desktop",
+            "line": 16
+          },
+          {
+            "name": "@navigate-video",
+            "line": 16
+          }
+        ],
+        "steps": [
+          {
+            "keyword": "When ",
+            "name": "member navigates to \"All Videos\" sub-category in \"Amazon Video\" from Departmants",
+            "line": 18,
+            "match": {
+              "location": "features/step_definitions/search.rb:27"
+            },
+            "result": {
+              "status": "failed",
+              "error_message": "Unable to find visible css \"span[role='navigation'][aria-label='Amazon Video']\" (Capybara::ElementNotFound)\n./features/step_definitions/search.rb:29:in `\"member navigates to {string} sub-category in {string} from Departmants\"'\nfeatures/A001_search_product.feature:18:in `When member navigates to \"All Videos\" sub-category in \"Amazon Video\" from Departmants'",
+              "duration": 15315223800
+            }
+          },
+          {
+            "keyword": "Then ",
+            "name": "member should see the \"Amazon Video\" bold in head",
+            "line": 19,
+            "match": {
+              "location": "features/step_definitions/search.rb:38"
+            },
+            "result": {
+              "status": "skipped"
+            }
+          },
+          {
+            "keyword": "Then ",
+            "name": "member should see the following page by clicking the link in head menu",
+            "line": 20,
+            "rows": [
+              {
+                "cells": [
+                  "Amazon Video"
+                ]
+              },
+              {
+                "cells": [
+                  "Originals"
+                ]
+              },
+              {
+                "cells": [
+                  "TV Shows"
+                ]
+              },
+              {
+                "cells": [
+                  "Movies"
+                ]
+              },
+              {
+                "cells": [
+                  "Kids"
+                ]
+              },
+              {
+                "cells": [
+                  "Help"
+                ]
+              },
+              {
+                "cells": [
+                  "Getting Started"
+                ]
+              },
+              {
+                "cells": [
+                  "Settings"
+                ]
+              },
+              {
+                "cells": [
+                  "Your Video Library"
+                ]
+              },
+              {
+                "cells": [
+                  "Your Watchlist"
+                ]
+              }
+            ],
+            "match": {
+              "location": "features/step_definitions/search.rb:43"
+            },
+            "result": {
+              "status": "skipped"
+            }
+          }
+        ],
+        "after": [
+          {
+            "match": {
+              "location": "capybara-2.16.0/lib/capybara/cucumber.rb:9"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 202556300
+            }
+          }
+        ]
+      }
+    ]
+  }
+]

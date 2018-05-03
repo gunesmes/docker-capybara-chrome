@@ -15,4 +15,3 @@ gem 'rspec-rerun'
 gem 'unirest'
 gem 'nokogiri'
 gem 'chunky_png'
-
