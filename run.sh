@@ -1,12 +1,23 @@
+#!/bin/bash
+
 SECONDS=0
 
+# remove the report folder for new reports
 rm report/*
-declare -a tags=("search" "navigate-video")
+
+# add the cucumber tags in this list
+declare -a tags=(
+	"search" \
+	"navigate-video"
+	)
+
+# pull the latest version of the images if not available locally 
+docker pull gunesmes/docker-capybara-chrome:latest
 
 for tag in "${tags[@]}"
 do
 	echo " - Running tests with tagged: $tag"
-	$HOME/Library/Group\ Containers/group.com.docker/bin/docker run -v $PWD:/usr/src/app gunesmes/docker-capybara-chrome bash -c "cucumber features --tags @'$tag' --format json --out=report/'$tag'_report.json" &
+	docker run -v $PWD:/usr/src/app gunesmes/docker-capybara-chrome:latest bash -c "cucumber features --tags @'$tag' --format json --out=report/'$tag'_report.json" &
 done
 
 wait

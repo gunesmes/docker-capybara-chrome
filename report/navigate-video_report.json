@@ -20,7 +20,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 35800
+              "duration": 64300
             }
           },
           {
@@ -29,7 +29,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 16600
+              "duration": 27900
             }
           },
           {
@@ -38,7 +38,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 31700
+              "duration": 42400
             }
           }
         ],
@@ -52,7 +52,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 8794373600
+              "duration": 4854391100
             }
           }
         ]
@@ -89,7 +89,7 @@
             "result": {
               "status": "failed",
               "error_message": "Unable to find visible css \"span[role='navigation'][aria-label='Amazon Video']\" (Capybara::ElementNotFound)\n./features/step_definitions/search.rb:29:in `\"member navigates to {string} sub-category in {string} from Departmants\"'\nfeatures/A001_search_product.feature:18:in `When member navigates to \"All Videos\" sub-category in \"Amazon Video\" from Departmants'",
-              "duration": 15315223800
+              "duration": 15157807700
             }
           },
           {
@@ -174,7 +174,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 202556300
+              "duration": 97151100
             }
           }
         ]

@@ -20,7 +20,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 42400
+              "duration": 529900
             }
           },
           {
@@ -29,7 +29,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 23800
+              "duration": 31600
             }
           },
           {
@@ -38,7 +38,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 36900
+              "duration": 58200
             }
           }
         ],
@@ -52,7 +52,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 8474758700
+              "duration": 4674144600
             }
           }
         ]
@@ -88,7 +88,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 10320426000
+              "duration": 8985388500
             }
           },
           {
@@ -100,7 +100,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 5091210400
+              "duration": 5042415800
             }
           },
           {
@@ -113,7 +113,7 @@
             "result": {
               "status": "failed",
               "error_message": "expected \"1-16 of over 30,000 results for \\\"Game of Thrones\\\" Sort by Relevance Price: Low to High Price: High to Low Avg. Customer Review Newest Arrivals\" to include \"Amazon Video : \\\"Game of Thrones\\\"\" (RSpec::Expectations::ExpectationNotMetError)\n./features/step_definitions/search.rb:20:in `\"member should see {string} in filter\"'\nfeatures/A001_search_product.feature:13:in `Then member should see 'Amazon Video : \"Game of Thrones\"' in filter'",
-              "duration": 144250100
+              "duration": 147982200
             }
           },
           {
@@ -135,7 +135,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 161106700
+              "duration": 181835800
             }
           }
         ]
