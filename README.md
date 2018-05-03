@@ -25,4 +25,16 @@ Ensure that you have chromedriver headless in your `env.rb`, you can set it as b
 
     Capybara.default_driver = :chrome_headless
     Capybara.javascript_driver = :chrome_headless
-    
+
+
+## simpliest running the tags in run.sh
+
+Ensure that you are in the project folder, and the path in run.sh is correct
+
+	~/d/simple_capybara (master ⚡) sh run.sh
+	 - Running tests with tagged: search
+	 - Running tests with tagged: navigate-video
+
+	 - All processes done!
+	 - 0 minutes and 28 seconds elapsed.
+
