@@ -16,8 +16,7 @@ RUN apt-get update -y && \
 
 # install from nodesource using apt-get
 RUN curl -sL https://deb.nodesource.com/setup | bash - && \
-  apt-get install -yq nodejs build-essential && \
-  npm install -g sqlcmdjs
+  apt-get install -yq nodejs build-essential
 
 WORKDIR /usr/src/app/
 
