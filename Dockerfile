@@ -1,4 +1,4 @@
-FROM ruby:2.3
+FROM ruby:2.4
 
 ENV DEBIAN_FRONTEND noninteractive
 ENV DEBCONF_NONINTERACTIVE_SEEN true
@@ -16,7 +16,8 @@ RUN apt-get update -y && \
 
 # install from nodesource using apt-get
 RUN curl -sL https://deb.nodesource.com/setup | bash - && \
-  apt-get install -yq nodejs build-essential
+  apt-get install -yq nodejs build-essential && \
+  npm install -g sqlcmdjs
 
 WORKDIR /usr/src/app/
 
