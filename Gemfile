@@ -2,9 +2,10 @@ source 'http://rubygems.org'
 
 gem "capybara"
 gem "cucumber"
-gem "rspec" 
 gem "spec" 
+gem "rspec" 
 gem "selenium-webdriver"
+gem "chromedriver-helper"
 gem "test-unit"
 gem 'dbi'
 gem 'rake'
