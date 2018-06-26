@@ -2,8 +2,8 @@ source 'http://rubygems.org'
 
 gem "capybara"
 gem "cucumber"
-gem "spec" 
-gem "rspec" 
+gem "spec"
+gem "rspec"
 gem "selenium-webdriver"
 gem "chromedriver-helper"
 gem "test-unit"
