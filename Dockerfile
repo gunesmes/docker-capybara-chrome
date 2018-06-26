@@ -15,10 +15,10 @@ RUN apt-get update -y && \
   libnss3 libxi6 libgconf-2-4
 
 # install from nodesource using apt-get
-RUN wget https://deb.nodesource.com/setup -O setup.sh 
-RUN setup.sh
-RUN apt-get install -yq nodejs build-essential
-RUN npm install -g sqlcmdjs
+RUN curl -sL https://deb.nodesource.com/setup_8.x | bash - && \
+  apt-get install -yq nodejs build-essential && \
+  npm install -g sqlcmdjs
+
 
 WORKDIR /usr/src/app/
 
