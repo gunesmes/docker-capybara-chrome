@@ -15,7 +15,7 @@ RUN apt-get update -y && \
   libnss3 libxi6 libgconf-2-4
 
 # install from nodesource using apt-get
-RUN curl -sL https://deb.nodesource.com/setup | bash - && \
+RUN curl -sL https://deb.nodesource.com/setup ; \
   apt-get install -yq nodejs build-essential && \
   npm install -g sqlcmdjs
 
