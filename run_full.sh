@@ -10,7 +10,6 @@ docker pull ${capybara_image}
 echo -e "\n - Test running on \n    https://www.gittigidiyor.com\n\n"
 
 rm -rf report/*
-rm -rf html_report/*
 
 for tag in \
 	"basket" 
@@ -18,14 +17,24 @@ for tag in \
 
 	for platform in \
 		"desktop" \
-		"mobile_iphone6_v"
+		"mobile_iphone6_v" \
+		"mobile_iphone6_h" \
+		"mobile_iphone6plus_v" \
+		"mobile_iphone6plus_h" \
+		"mobile_samsungs6_v" \
+		"mobile_samsungs6_h" \
+		"samsungsTabA_h" \
+		"mobile_samsungsTabA_v" \
+		"mobile_samsungsTabA_h" \
+		"driver_ipad_v" \
+		"driver_ipad_h"
 		do
 			
 		run_name=test_${tag}_on_${platform}
 		run_command="--tags @$tag --tags @$platform DRIVER=driver_$platform"
 		echo " - Running tests: $tag on $platform"
 		
-		docker run --shm-size 256M --name ${run_name} -v $PWD:/usr/src/app ${capybara_image} bash -c "cucumber features --tags @'$tag' --format html --out=html_report/${run_name}_report.html RUN_COMMAND=\"$run_command\" DRIVER=driver_$platform && exit 0" && echo "Finished $tag on $platform:" && duration=$SECONDS && echo -e " - $(($duration / 60)) minutes and $(($duration % 60)) seconds elapsed.\n" && docker rm -f ${run_name} &
+		docker run --shm-size 32M --name ${run_name} -v $PWD:/usr/src/app ${capybara_image} bash -c "cucumber features --tags @'$tag' --format json --out=report/${run_name}_report.json RUN_COMMAND=\"$run_command\" DRIVER=driver_$platform && exit 0" && echo "Finished $tag on $platform:" && duration=$SECONDS && echo -e " - $(($duration / 60)) minutes and $(($duration % 60)) seconds elapsed.\n" && docker rm -f ${run_name} &
 	done
 done
 

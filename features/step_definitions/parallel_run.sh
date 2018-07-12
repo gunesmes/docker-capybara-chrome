@@ -1,1 +1,0 @@
-docker run -v /Users/mesutgunes/docker/simple_capybara/:/usr/src/app gunesmes/docker-capybara-chrome bash -c "cucumber features --tag @search --format html --out=search_report.html"

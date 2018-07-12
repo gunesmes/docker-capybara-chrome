@@ -1,44 +1,64 @@
-# docker-capybara-chrome
-Run Capybara with Chromedriver in headless mode
+## Test Setup
 
-Ruby + Capybara + Chrome + Chromedriver
+Basic test base setup with cucumber, capybara, selenium, rspec and poltergeist.
 
-## get the image
-    docker pull gunesmes/docker-capybara-chrome
+First thing to do is installing ruby or jruby. You can do this by using rbenv or rvm or default system installations (brew, apt-get, yum, etc)
+    
+### Install Brew    
+    https://brew.sh/index_tr.html
+    
+### Install rbenv    
+    brew install rbenv
 
-## run the image with executing your tests
-    docker run -v /path/to/project:/usr/src/app parallel_cucumber bash -c "cucumber features/M001_head_menu.feature"
+### Install Latest Ruby
+    rbenv install --list --> find latest Ruby version
+    
+    rbenv install 2.4.0
 
-or
-
-    docker run -v /path/to/project:/usr/src/app parallel_cucumber bash -c "cucumber features --tag @smoke"
-
-
-## set headless driver in your env.rb file
-
-Ensure that you have chromedriver headless in your `env.rb`, you can set it as below:
-
-    Capybara.register_driver :chrome_headless do |app|
-      args = ["--window-size=1280,1696", "--disable-infobars", "--disable-notifications", "--no-sandbox", "--headless", "--disable-gpu"]  
-      Capybara::Selenium::Driver.new(app, {:browser => :chrome, :args => args})
-    end
-
-    Capybara.default_driver = :chrome_headless
-    Capybara.javascript_driver = :chrome_headless
+For Windows:
+	download installer: http://rubyinstaller.org/downloads/
 
 
-## simpliest running the tags in run.sh
+### Install Bundler
+	gem install bundler
 
-Ensure that you are in the project folder, and the path in run.sh is correct
+### Clone the project into project folder
+    mkdir ~/project
+    cd ~/project
+    git clone https://gitlab.com/gunesmes/cucumber_capybara_responsive_docker_sample.git
 
-	~/d/simple_capybara (master ⚡) sh run.sh
-	latest: Pulling from gunesmes/docker-capybara-chrome
-	Digest: sha256:7a4e0051cd5483ced7f489f14dfc8dbcfc9b2957e4e77d5ee3c9aca077820b50
-	Status: Image is up to date for gunesmes/docker-capybara-chrome:latest
-	 - Running tests with tagged: search
-	 - Running tests with tagged: navigate-video
+### install Capybara required gems
+    cd ~/project/cucumber_capybara_responsive_docker_sample
+    bundle install
 
-	 - All processes done!
-	 - 0 minutes and 27 seconds elapsed.
+### install chromedriver
+    brew install chromedriver
 
+And then create your tests by following the example and run them as below:
+
+    bundle exec cucumber features
+
+or simply
+
+    cucumber features DRIVER=chrome --profile=html_report
+
+### Run
+#### Visual Run for mobile iPhone6
+    cucumber features/G001_basket_product_checks.feature DRIVER=driver_mobile_iphone6_v_visible
+
+#### Visual Run for Desktop
+    cucumber features/G001_basket_product_checks.feature DRIVER=driver_chrome
+
+#### Docker run for a single tag with single platform
+    docker run --shm-size 128M --rm --name capybara_m -v $PWD:/usr/src/app gunesmes/docker-capybara-chrome:latest bash -c "cucumber features/G001_basket_product_checks.feature DRIVER=driver_desktop"
+
+#### Docker run for parallel execution of smoke test 
+    bash run.sh
+
+check the reports inside the ./html_report
+
+#### Docker run for parallel execution of all tags with all platforms
+    bash run_full.sh
+
+create report form json report in ./report folder
 
