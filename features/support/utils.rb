@@ -23,7 +23,7 @@ def wait_until(&block)
     break if block_given? && yield
     sleep(sleep_time)
   end
-  puts "Block doesnt return true within timeout" if not (block_given? && yield)
+  puts "Block does not return true within timeout" if not (block_given? && yield)
   sleep(sleep_time)
 end
 
@@ -35,25 +35,15 @@ def wait_until_dom_ready()
   wait_until { dom_ready?}
 end
 
-def wait_until(&block)
-  sleep_time = 0.3
-  (Capybara.default_max_wait_time / sleep_time).to_i.times do
-    break if block_given? && yield
-    sleep(sleep_time)
-  end
-  puts "Block doesnt return true within timeout" if not (block_given? && yield)
-  sleep(sleep_time)
-end
-
 def create_dummy_email()
-   # time based unique email adress
-   make_unique = Time.now.to_i
-   email = 'performance.delete.' + make_unique.to_s + '@gmail.com'
+  # time based unique email adress
+  make_unique = Time.now.to_i
+  email = 'performance.delete.' + make_unique.to_s + '@gmail.com'
 end
 
 def has_digits?(str)
-   # check if a string icnlude numbers
-   str.count("0-9") > 0
+  # check if a string icnlude numbers
+  str.count("0-9") > 0
 end
 
 def dom_ready?
