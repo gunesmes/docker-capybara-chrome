@@ -7,7 +7,7 @@ require 'rspec-rerun/tasks'
 require 'selenium-webdriver'
 
 
-Dir['/Users/mesutgunes/Projects/gdk-ce/gitlab/qa/*.rb'].each {|file| require file }
+Dir['*.rb'].each {|file| require file }
 
 
 driver = (ENV['DRIVER']).to_sym if not ENV['DRIVER'] == nil
