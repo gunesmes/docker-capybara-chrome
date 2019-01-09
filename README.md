@@ -1,3 +1,6 @@
+
+[![Docker run for parallel execution](http://img.youtube.com/vi/Nd4kGeQeJgk/0.jpg)](http://www.youtube.com/watch?v=Nd4kGeQeJgk "Docker Run for Parallel Execution")
+
 ## Test Setup
 
 Basic test base setup with cucumber, capybara, selenium, rspec and poltergeist.
