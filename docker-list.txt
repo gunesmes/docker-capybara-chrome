@@ -1,1 +1,4 @@
-CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS              PORTS               NAMES
+CONTAINER ID        IMAGE                                    COMMAND                  CREATED             STATUS                              PORTS                    NAMES
+07963a4de31f        gunesmes/docker-capybara-chrome:latest   "bash -c 'cucumber f…"   45 seconds ago      Exited (1) Less than a second ago                            test_basket_on_desktop
+3a48a3c2a66c        gunesmes/docker-capybara-chrome:latest   "bash -c 'cucumber f…"   46 seconds ago      Exited (1) 2 seconds ago                                     test_basket_on_mobile_iphone6_v
+c60e15a13f6a        postgres:latest                          "docker-entrypoint.s…"   4 months ago        Up 2 weeks                          0.0.0.0:5432->5432/tcp   testhive-postgres

@@ -34,7 +34,7 @@ class IDs
 	# IF MOBILE    
 	else
 		@header = {
-			"Search"                              => [:css, "#search_word_mobile"],
+			"Search"                              => [:css, "#search_word"],
 		}
 										 
 		@containers = {

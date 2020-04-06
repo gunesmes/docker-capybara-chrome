@@ -1,7 +1,6 @@
 require 'capybara'
-require 'spec'
-require 'rspec'
-require 'capybara/cucumber'
+require 'capybara/rspec'
+require "capybara/cucumber"
 require 'action_mailer'
 require 'rspec-rerun/tasks'
 require 'selenium-webdriver'
@@ -21,8 +20,8 @@ Capybara.default_max_wait_time = 30
 Capybara.ignore_hidden_elements = true
 Capybara.save_path = File.dirname(__FILE__) + "/media"
 
-Capybara.javascript_driver = driver || :chrome
-Capybara.default_driver    = driver || :chrome
+Capybara.javascript_driver = driver || :driver_chrome
+Capybara.default_driver    = driver || :driver_chrome
 
 # * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
 # * * * * * * * * * *  D R I V E R S  * * * * * * * * * * *
