@@ -17,3 +17,4 @@ gem 'unirest'
 gem 'nokogiri'
 gem 'chunky_png'
 gem 'capycon'
+gem "rest-client", ">= 1.8.0"
