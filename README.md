@@ -1,5 +1,4 @@
-
-[![Docker run for parallel execution](http://img.youtube.com/vi/Nd4kGeQeJgk/0.jpg)](https://www.youtube.com/watch?v=Nd4kGeQeJgk "Docker Run for Parallel Execution")
+[![Docker run for parallel execution](https://img.youtube.com/vi/Nd4kGeQeJgk/maxresdefault.jpg)](https://youtu.be/Nd4kGeQeJgk "Docker Run for Parallel Execution")
 
 ## Test Setup
 
