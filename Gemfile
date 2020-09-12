@@ -20,4 +20,4 @@ gem 'capycon'
 gem "rest-client", ">= 1.8.0"
 gem "actionpack", ">= 6.0.3.1"
 gem "activesupport", ">= 6.0.3.1"
-
+gem "actionview", ">= 6.0.3.3"
