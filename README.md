@@ -7,7 +7,7 @@ Basic test base setup with cucumber, capybara, selenium, rspec and poltergeist.
 First thing to do is installing ruby or jruby. You can do this by using rbenv or rvm or default system installations (brew, apt-get, yum, etc)
     
 ### Install Brew    
-    https://brew.sh/index_tr.html
+    bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
     
 ### Install rbenv    
     brew install rbenv
